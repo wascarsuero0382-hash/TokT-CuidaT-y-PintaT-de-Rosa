@@ -1,0 +1,70 @@
+<igx-stepper titlePosition="bottom" #progressBarStation3 class="progress-bar-station-3">
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Recepción y Registro</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Educación y Empoderamiento</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Triaje y Signos Vitales</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Evaluación Médica</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Resultados y Orientación</p>
+  </igx-step>
+</igx-stepper>
+<div class="column-layout station-3-content">
+  <h3 class="content">
+    Estación 3: Triaje y Signos Vitales
+  </h3>
+  <p class="content">
+    Registre la tensión arterial, glucemia, peso y talla. El IMC se calculará automáticamente.
+  </p>
+  <igx-input-group type="box" class="triage-ta-input">
+    <input type="text" [(ngModel)]="value" placeholder="Ej: 120/80" required="true" igxInput #igxInput />
+    <label igxLabel>Tensión Arterial (mmHg)</label>
+    @if (igxInput.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="box" class="triage-ta-input">
+    <input type="number" [ngModel]="value1" placeholder="Ej: 90" required="true" igxInput (ngModelChange)="value1 = stringToNumber($event)" #igxInput1 />
+    <label igxLabel>Glucemia (mg/dL)</label>
+    @if (igxInput1.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="box" class="triage-ta-input">
+    <input type="number" [ngModel]="value2" placeholder="Ej: 70.5" required="true" igxInput (ngModelChange)="value2 = stringToNumber($event)" #igxInput2 />
+    <label igxLabel>Peso (kg)</label>
+    @if (igxInput2.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="box" class="triage-ta-input">
+    <input type="number" [ngModel]="value3" placeholder="Ej: 1.65" required="true" igxInput (ngModelChange)="value3 = stringToNumber($event)" #igxInput3 />
+    <label igxLabel>Talla (m)</label>
+    @if (igxInput3.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <div class="row-layout bmi-display-row">
+    <p class="content">
+      IMC:
+    </p>
+    <p class="bmi-value">
+      --
+    </p>
+  </div>
+  <button igxButton="outlined" type="button" class="station-3-back-button">
+    <igx-icon>
+      arrow_back
+    </igx-icon>
+    <span>Estación Anterior</span>
+  </button>
+  <button igxButton="contained" type="button" (click)="clickStation3NextButton()" class="station-3-back-button">
+    Siguiente Estación
+  </button>
+</div>

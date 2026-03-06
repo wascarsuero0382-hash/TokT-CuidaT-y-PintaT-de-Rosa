@@ -1,0 +1,40 @@
+<igx-stepper titlePosition="bottom" #progressBarStation2 class="progress-bar-station-2">
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Recepción y Registro</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Educación y Empoderamiento</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Triaje y Signos Vitales</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Evaluación Médica</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Resultados y Orientación</p>
+  </igx-step>
+</igx-stepper>
+<div class="column-layout station-2-content">
+  <h3 class="content">
+    Estación 2: Educación y Empoderamiento
+  </h3>
+  <p class="content">
+    Confirme la asistencia a charlas y talleres de autoexploración.
+  </p>
+  <igx-checkbox labelPosition="after" [(ngModel)]="checked" class="talk-attendance-checkbox">
+    Asistencia a Charla Educativa
+  </igx-checkbox>
+  <igx-checkbox labelPosition="after" [(ngModel)]="checked1" class="talk-attendance-checkbox">
+    Asistencia a Taller de Autoexploración
+  </igx-checkbox>
+  <button igxButton="outlined" type="button" class="station-2-back-button">
+    <igx-icon>
+      arrow_back
+    </igx-icon>
+    <span>Estación Anterior</span>
+  </button>
+  <button igxButton="contained" type="button" (click)="clickStation2NextButton()" class="station-2-back-button">
+    Siguiente Estación
+  </button>
+</div>

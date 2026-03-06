@@ -1,0 +1,49 @@
+<div class="column-layout admin-module-content">
+  <h3 class="content">
+    Módulo de Administrador
+  </h3>
+  <p class="content">
+    Gestionar datos y generar reportes administrativos de la jornada.
+  </p>
+  <button igxButton="contained" type="button" class="export-excel-button">
+    <igx-icon>
+      table_view
+    </igx-icon>
+    <span>Exportar Base de Datos a Excel</span>
+  </button>
+  <button igxButton="contained" type="button" class="export-excel-button">
+    <igx-icon>
+      picture_as_pdf
+    </igx-icon>
+    <span>Exportar Base de Datos a PDF</span>
+  </button>
+  <button igxButton="contained" type="button" class="export-excel-button">
+    <igx-icon>
+      summarize
+    </igx-icon>
+    <span>Generar Informe de Resultados de Jornada</span>
+  </button>
+  <igx-card [elevated]="true" class="journal-summary-card">
+    <igx-card-header>
+      <h3 igxCardHeaderTitle>
+        Resumen de Jornada
+      </h3>
+      <h5 igxCardHeaderSubtitle>
+        El subtítulo va aquí...
+      </h5>
+    </igx-card-header>
+    <igx-card-content>
+      <div class="column-layout journal-summary-content">
+        <p class="ig-typography__body-2 content">
+          Total de pacientes atendidos: --
+        </p>
+        <p class="ig-typography__body-2 content">
+          Hallazgos sospechosos encontrados: --
+        </p>
+        <p class="ig-typography__body-2 content">
+          Promedio de IMC: --
+        </p>
+      </div>
+    </igx-card-content>
+  </igx-card>
+</div>

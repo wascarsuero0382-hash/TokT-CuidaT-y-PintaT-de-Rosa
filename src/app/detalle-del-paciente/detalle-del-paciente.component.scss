@@ -1,0 +1,48 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.patient-detail-content {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.patient-summary-card {
+  height: max-content;
+  min-width: 320px;
+  max-width: 576px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.patient-summary-content {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 16px 0;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.content {
+  height: max-content;
+  min-width: min-content;
+}
+.generate-pdf-button {
+  --ig-size: var(--ig-size-medium);
+  height: max-content;
+}

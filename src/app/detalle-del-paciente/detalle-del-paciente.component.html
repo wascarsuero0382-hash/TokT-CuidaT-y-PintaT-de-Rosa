@@ -1,0 +1,43 @@
+<div class="column-layout patient-detail-content">
+  <h3 class="content">
+    Detalle del Paciente: [Nombre del Paciente]
+  </h3>
+  <p class="content">
+    Aquí se mostrará toda la información recopilada del paciente a través de las estaciones.
+  </p>
+  <button igxButton="contained" type="button" class="generate-pdf-button">
+    <igx-icon>
+      picture_as_pdf
+    </igx-icon>
+    <span>Generar Expediente Clínico PDF</span>
+  </button>
+  <igx-card [elevated]="true" class="patient-summary-card">
+    <igx-card-header>
+      <h3 igxCardHeaderTitle>
+        Resumen del Expediente
+      </h3>
+      <h5 igxCardHeaderSubtitle>
+        El subtítulo va aquí...
+      </h5>
+    </igx-card-header>
+    <igx-card-content>
+      <div class="column-layout patient-summary-content">
+        <p class="ig-typography__body-2 content">
+          Recepción y Registro: Completado
+        </p>
+        <p class="ig-typography__body-2 content">
+          Educación y Empoderamiento: Completado
+        </p>
+        <p class="ig-typography__body-2 content">
+          Triaje y Signos Vitales: Completado (IMC: --)
+        </p>
+        <p class="ig-typography__body-2 content">
+          Evaluación Médica: Completado
+        </p>
+        <p class="ig-typography__body-2 content">
+          Resultados y Orientación: Completado (Diagnóstico: --)
+        </p>
+      </div>
+    </igx-card-content>
+  </igx-card>
+</div>

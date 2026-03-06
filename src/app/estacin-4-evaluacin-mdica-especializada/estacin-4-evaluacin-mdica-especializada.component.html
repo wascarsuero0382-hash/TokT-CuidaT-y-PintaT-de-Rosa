@@ -1,0 +1,45 @@
+<igx-stepper titlePosition="bottom" #progressBarStation4 class="progress-bar-station-4">
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Recepción y Registro</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Educación y Empoderamiento</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Triaje y Signos Vitales</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Evaluación Médica</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Resultados y Orientación</p>
+  </igx-step>
+</igx-stepper>
+<div class="column-layout station-4-content">
+  <h3 class="content">
+    Estación 4: Evaluación Médica Especializada
+  </h3>
+  <p class="content">
+    Registre las notas clínicas de gineco-oncología y cargue resultados de imágenes.
+  </p>
+  <igx-input-group type="box" class="medical-notes-input">
+    <label igxLabel>Notas Clínicas (Gineco-Oncología)</label>
+    <textarea placeholder="Ingrese las notas de la evaluación médica" required="true" igxInput></textarea>
+  </igx-input-group>
+  <button igxButton="outlined" type="button" class="upload-image-button">
+    <igx-icon>
+      cloud_upload
+    </igx-icon>
+    <span>Cargar Imagen/Resultado de Sonomamografía</span>
+  </button>
+  <img src="/assets/a-placeholder-image-for-upload-a4eb9e967d06.png" alt="" class="uploaded-image-preview" />
+  <button igxButton="outlined" type="button" class="upload-image-button">
+    <igx-icon>
+      arrow_back
+    </igx-icon>
+    <span>Estación Anterior</span>
+  </button>
+  <button igxButton="contained" type="button" (click)="clickStation4NextButton()" class="upload-image-button">
+    Siguiente Estación
+  </button>
+</div>

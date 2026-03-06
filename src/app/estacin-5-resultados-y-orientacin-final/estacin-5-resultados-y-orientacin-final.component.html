@@ -1,0 +1,62 @@
+<igx-stepper titlePosition="bottom" #progressBarStation5 class="progress-bar-station-5">
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Recepción y Registro</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Educación y Empoderamiento</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Triaje y Signos Vitales</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Evaluación Médica</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Resultados y Orientación</p>
+  </igx-step>
+</igx-stepper>
+<div class="column-layout station-5-content">
+  <h3 class="content">
+    Estación 5: Resultados y Orientación Final
+  </h3>
+  <p class="content">
+    Seleccione el diagnóstico, el plan de tratamiento, genere la receta y confirme la entrega del kit.
+  </p>
+  <igx-select type="box" placeholder="Seleccione el diagnóstico" required="true" class="user-input">
+    <igx-select-item value="Normal">
+      Normal
+    </igx-select-item>
+    <igx-select-item value="Sospechoso">
+      Sospechoso
+    </igx-select-item>
+    <igx-select-item value="Cáncer">
+      Cáncer Confirmado
+    </igx-select-item>
+    <igx-select-item value="Otro">
+      Otro
+    </igx-select-item>
+    <label igxLabel>Diagnóstico</label>
+  </igx-select>
+  <igx-input-group type="box" class="user-input">
+    <label igxLabel>Plan de Tratamiento</label>
+    <textarea placeholder="Ingrese el plan de tratamiento" required="true" igxInput></textarea>
+  </igx-input-group>
+  <button igxButton="outlined" type="button" class="generate-prescription-button">
+    <igx-icon>
+      receipt
+    </igx-icon>
+    <span>Generar Receta Médica</span>
+  </button>
+  <igx-checkbox labelPosition="after" required="true" [(ngModel)]="checked" class="kit-delivery-checkbox">
+    Confirmar Entrega de Kit de Orientación
+  </igx-checkbox>
+  <button igxButton="outlined" type="button" class="generate-prescription-button">
+    <igx-icon>
+      arrow_back
+    </igx-icon>
+    <span>Estación Anterior</span>
+  </button>
+  <button igxButton="contained" type="button" (click)="clickStation5FinishButton()" class="generate-prescription-button">
+    Finalizar Atención
+  </button>
+</div>

@@ -1,0 +1,58 @@
+<igx-navbar class="app-navbar">
+  <igx-navbar-title class="navbar-content">
+    <h6 class="h6">
+      Gestión de Pacientes
+    </h6>
+    <button igxButton="flat" type="button" class="button">
+      Button
+    </button>
+    <button igxButton="flat" type="button" class="button">
+      Button
+    </button>
+  </igx-navbar-title>
+  <button igxIconButton="flat">
+    <igx-icon>
+      search
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>
+      favorite
+    </igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>
+      more_vert
+    </igx-icon>
+  </button>
+</igx-navbar>
+<div class="row-layout main-horizontal-group">
+  <igx-nav-drawer [isOpen]="true" [pin]="true" width="320px" class="app-nav-drawer">
+    <ng-template igxDrawer>
+      <div igxDrawerItem>
+        <span>Recepción y Registro</span>
+      </div>
+      <div igxDrawerItem>
+        <span>Educación y Empoderamiento</span>
+      </div>
+      <div igxDrawerItem>
+        <span>Triaje y Signos Vitales</span>
+      </div>
+      <div igxDrawerItem>
+        <span>Evaluación Médica Especializada</span>
+      </div>
+      <div igxDrawerItem>
+        <span>Resultados y Orientación Final</span>
+      </div>
+      <div igxDrawerItem>
+        <span>Detalle del Paciente</span>
+      </div>
+      <div igxDrawerItem>
+        <span>Módulo de Administrador</span>
+      </div>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="app-view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<igx-stepper titlePosition="bottom" #progressBarStation1 class="progress-bar-station-1">
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Recepción y Registro</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Educación y Empoderamiento</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Triaje y Signos Vitales</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Evaluación Médica</p>
+  </igx-step>
+  <igx-step [isValid]="false">
+    <p igxStepTitle>Resultados y Orientación</p>
+  </igx-step>
+</igx-stepper>
+<div class="column-layout station-1-content">
+  <h3 class="content">
+    Estación 1: Recepción y Registro
+  </h3>
+  <p class="content">
+    Complete los datos personales del paciente y obtenga el consentimiento informado.
+  </p>
+  <igx-input-group type="box" class="user-input">
+    <input type="text" [(ngModel)]="value" placeholder="Ingrese el nombre completo del paciente" required="true" igxInput #igxInput />
+    <label igxLabel>Nombre Completo</label>
+    @if (igxInput.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="border" class="user-input">
+    <input type="text" [(ngModel)]="value1" placeholder="Seleccione la fecha de nacimiento" required="true" igxInput #igxInput1 />
+    <label igxLabel>Fecha de Nacimiento</label>
+    @if (igxInput1.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="box" class="user-input">
+    <input type="text" [(ngModel)]="value2" placeholder="Ingrese el número de identificación" required="true" igxInput #igxInput2 />
+    <label igxLabel>Número de Identificación</label>
+    @if (igxInput2.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="box" class="user-input">
+    <label igxLabel>Dirección</label>
+    <textarea placeholder="Ingrese la dirección del paciente" required="true" igxInput></textarea>
+  </igx-input-group>
+  <igx-input-group type="box" class="user-input">
+    <input type="tel" [(ngModel)]="value3" placeholder="Ingrese el número de teléfono" required="true" igxInput #igxInput3 />
+    <label igxLabel>Teléfono</label>
+    @if (igxInput3.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-input-group type="box" class="user-input">
+    <input type="email" [(ngModel)]="value4" placeholder="Ingrese el email del paciente" required="true" igxInput #igxInput4 />
+    <label igxLabel>Email</label>
+    @if (igxInput4.validity.valueMissing) {
+      <igx-hint>Este campo es obligatorio</igx-hint>
+    }
+  </igx-input-group>
+  <igx-checkbox labelPosition="after" required="true" [(ngModel)]="checked" class="informed-consent-checkbox">
+    Consentimiento Informado
+  </igx-checkbox>
+  <button igxButton="contained" type="button" class="sign-consent-button">
+    Firmar Consentimiento Digital
+  </button>
+  <button igxButton="contained" type="button" (click)="clickStation1NextButton()" class="sign-consent-button">
+    Siguiente Estación
+  </button>
+</div>
